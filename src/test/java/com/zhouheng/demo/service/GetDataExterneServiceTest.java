@@ -23,7 +23,7 @@ public class GetDataExterneServiceTest {
 
 	@Test
 	public void testGetMetaData() {
-		JSONObject metaData = GetDataExterneService.getExtractData();
+		JSONObject metaData = GetDataExterneService.getMetaData();
 		System.out.println("The metaData is: " + metaData.toString(2));
 	}
 
