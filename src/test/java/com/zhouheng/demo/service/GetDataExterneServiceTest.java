@@ -3,17 +3,11 @@ package com.zhouheng.demo.service;
 import static org.junit.Assert.*;
 
 import org.json.JSONObject;
-import org.junit.Before;
 import org.junit.Test;
 
 
 public class GetDataExterneServiceTest {
 	
-	
-
-	@Before
-	public void setUp() throws Exception {
-	}
 
 	@Test
 	public void testGetExtractData() {
