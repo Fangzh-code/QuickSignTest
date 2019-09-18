@@ -17,6 +17,7 @@ public class DataValidateUtilsTest {
 	public void testSsnFormateCheck() {
 		assertEquals(true, DataValidateUtils.ssnFormateCheck("289037511324218"));
 		assertEquals(true, DataValidateUtils.ssnFormateCheck("189109921628783"));
+		assertEquals(false, DataValidateUtils.ssnFormateCheck("989109921628783"));
 	}
 	
 	@Test

@@ -25,7 +25,7 @@ public class ExtractDataTest {
 
 	@Test
 	public void testGetExtratDataAfterValidate() {
-		extractData.getExtratDataBeforeValidate();
+		//extractData.getExtratDataBeforeValidate();
 		JSONObject extractDataAfter = extractData.getExtratDataAfterValidate();
 		System.out.println("The extractData after validation is: " + extractDataAfter.toString(2));
 	}

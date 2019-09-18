@@ -28,11 +28,6 @@ public class ExtractData {
 	
 	public ExtractData(JSONObject extractDataJSONObject) {
 		dataJSONObjectOCR = extractDataJSONObject;
-	}
-	
-	public JSONObject getExtratDataBeforeValidate() {
-		JSONObject extractDataObject = new JSONObject();
-		
 		
 		JSONArray dataList = dataJSONObjectOCR.getJSONArray("data");
 		for (int i = 0; i<dataList.length(); ) {
@@ -58,6 +53,36 @@ public class ExtractData {
 				i++;
 			}
 		}
+	}
+	
+	public JSONObject getExtratDataBeforeValidate() {
+		JSONObject extractDataObject = new JSONObject();
+		
+		
+		/*JSONArray dataList = dataJSONObjectOCR.getJSONArray("data");
+		for (int i = 0; i<dataList.length(); ) {
+			JSONObject dataObject = dataList.getJSONObject(i);
+			String value = dataObject.getString("value");
+			
+			if (value.equals(VALUE_NAME_SSN)) {
+				while(dataObject.getInt("y") == dataList.getJSONObject(++i).getInt("y")) {
+					ssn.add(dataList.getJSONObject(i).getString("value"));
+				}
+			} else if (value.equals(VALUE_NAME_SIRET)) {
+				while(dataObject.getInt("y") == dataList.getJSONObject(++i).getInt("y")) {
+					siret.add(dataList.getJSONObject(i).getString("value"));
+				}
+			} else if (value.equals(VALUE_NAME_ADDRESS)) {
+				if (dataObject.getInt("y") == dataList.getJSONObject(++i).getInt("y")) {
+					address = dataList.getJSONObject(i).getString("value");
+				}
+			} else if (value.split("/").length == 3) {
+				date.add(value);
+				i++;
+			} else {
+				i++;
+			}
+		}*/
 		
 		extractDataObject.put(KEY_NAME_SSN, ssn);
 		extractDataObject.put(KEY_NAME_SIRET, siret);
